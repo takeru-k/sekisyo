@@ -1,0 +1,55 @@
+@use "../setting/setting";
+
+.c-cta{
+  background: url(../images/cta.png)no-repeat center
+          center/cover;
+  padding: 24px 0;
+}
+
+.c-cta__lead{
+  font-family: setting.$font-mincho;
+}
+
+.c-cta__contents{
+  padding: 40px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+.c-cta__info{
+  margin-top: 24px;
+  p{
+    font-family: setting.$font-mincho;
+  }
+
+  a{
+    font-size: 32px;
+  }
+
+  span{
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.c-cta__hour{
+  font-size: 14px;
+}
+
+@media (min-width: 1024px){
+  .c-cta{
+    padding: 40px 0;
+  background: url(../images/cta-lg.png)no-repeat center
+          center/cover;
+  }
+
+  .c-cta__lead{
+    font-size: 18px;
+  }
+
+  .c-cta__info{
+    a{
+      font-size: 44px;
+    }
+  }
+}

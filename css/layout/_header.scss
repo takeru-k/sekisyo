@@ -1,0 +1,167 @@
+@use "../setting/setting";
+
+.l-header {
+  height: 60px;
+  width: 100%;
+  z-index: 100;
+  position: relative;
+  margin: 0 auto;
+}
+
+.l-header__logo {
+  width: 180px;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  z-index: 1000;
+
+  a {
+    position: relative;
+  }
+
+}
+
+.l-header__menu{
+  li{
+    text-transform: uppercase;
+    font-family: setting.$font-mincho;
+  }
+}
+
+
+
+
+@media not all and (min-width: 1024px) {
+  /* メニューのスタイリング */
+  .l-header__inner {
+  padding: 8px 16px;
+  margin: 0 auto;
+}
+
+
+  .l-header__nav {
+  position: fixed;
+  right: -100%; /* メニューの位置マイナス指定で画面外に */
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  transition: 0.3s;
+}
+
+  .l-header__menu {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      border-bottom: 1px solid #ececec;
+      letter-spacing: 0.1em;
+      font-size: 16px;
+      position: relative;
+
+      &:first-child {
+        border-top: 1px solid #ececec;
+      }
+    }
+
+    a {
+      position: relative;
+      padding-left: 24px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 11px;
+        height: 14px;
+        background: url(../images/icon/icon-arrow.svg) no-repeat center
+          center/cover;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:hover {
+        color: setting.$color-main;
+      }
+    }
+  }
+
+  .l-header__nav.open {
+    position: absolute;
+    right: 0; /* メニューオープン時位置0にして画面内に */
+    z-index: 100;
+    top: 60px;
+  }
+
+  .l-header__contact {
+    margin: 20px 16px;
+    padding: 16px;
+    display: block;;
+  }  
+}
+
+@media (min-width: 768px){
+  .l-header__contact{
+    background: setting.$color-sub;
+    color: #fff;
+    text-align: center;
+
+    padding: 12px 24px 12px 48px;
+  }
+}
+
+/* 1024px以上のスタイリング */
+@media (min-width: 1024px){
+  .l-header{
+    height: 80px;
+  }
+  .l-header__logo{
+    width: 240px;
+  }
+
+  .l-header__nav {
+    display: flex;
+    position: static;
+    justify-content: flex-end;
+    height: 80px;
+  }
+
+  .l-header__menu {
+    /* メニューを横に */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+
+    li {
+      color: #333;
+      padding: 24px;
+      border-bottom: none;
+
+      &:hover{
+        color: setting.$color-main;
+      }
+    }
+  }
+
+  .l-header__highlight{
+    background: setting.$color-main;
+    height: 80px;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    
+    a{
+      color: #fff;
+    }
+  }
+}
+
+.current-menu-item {
+  color: setting.$color-main;
+}

@@ -1,0 +1,77 @@
+@use "../setting/setting";
+
+.c-flow{
+  padding-top: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.c-flow__list{
+  margin-bottom: 26px;
+  padding-left: 40px;
+}
+
+.c-flow__year{
+  position: relative;
+  line-height: 1.1;
+  color: #808080;
+  font-size: 18px;
+
+  span{
+    font-size: 14px;
+  }
+
+     &:after{
+      content: "";
+    position: absolute;
+    top: 44%;
+    transform: translateY(-44%);
+    bottom: 0;
+    left: -37px;
+    width: 8px;
+    height: 8px;
+    content: "";
+    display: inline-block;
+    background: setting.$color-main;
+    border-radius: 50%;
+
+}
+}
+
+.c-flow__desc{
+  position: relative;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 24px;
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -34px;
+    display: block;
+    width: 1px;
+    background: #808080;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-flow{
+    padding-top: 48px;
+  }
+
+  .c-flow__year{
+    font-size: 24px;
+
+    span{
+      font-size: 16px;
+      padding-left: 4px;
+    }
+  }
+
+  .c-flow__desc{
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../setting/setting";
+
+.c-box{
+  max-width: 800px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.c-box__content{
+  background: #F7F7F7;
+  margin-top: 12px;
+  padding: 24px 16px;
+
+  li{
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+
+    &:before{
+      position: absolute;
+      content: '';
+      top: 0.6em;
+      left: 0%;
+     
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: setting.$color-main;;
+    }
+  }
+
+  a{
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-box__content{
+    padding-left: 32px;
+  }
+}

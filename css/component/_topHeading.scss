@@ -1,0 +1,45 @@
+@use "../setting/setting";
+
+.c-topHeading{
+  font-family: setting.$font-mincho;
+
+  h2{
+    font-weight: normal;
+    font-size: 24px;
+  }
+
+  span{
+    color: setting.$color-sub;
+    font-size: 14px;
+  }
+}
+
+.c-topHeading__bg{
+  position: absolute;
+  top: 28px;
+  left: 0;
+  color: rgba(178, 178, 178, 0.1);
+  font-size: 80px;
+  letter-spacing: .05em;
+  line-height: 1;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+
+  @media (min-width: 768px){
+    font-size: 88px;
+  }
+
+  @media (min-width: 1024px){
+    left: 6%;
+    font-size: 160px;
+    letter-spacing: .2em;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-topHeading{
+    h2{
+      font-size: 36px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../setting/setting";
+
+.c-heading{
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+
+  span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(178, 178, 178, 0.1);
+    font-size: 80px;
+    letter-spacing: .05em;
+    line-height: 1;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+  }
+
+  p{
+    color: setting.$color-sub;
+    font-family: setting.$font-mincho;
+    padding-top: 40px;
+  }
+}
+
+
+@media (min-width: 768px){
+  .c-heading{
+    span{
+      font-size: 120px;
+      top: -24px;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .c-heading{
+    max-width: 680px;
+    p{
+      font-size: 20px;
+    }
+
+    span{
+      font-size: 160px;
+      top: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

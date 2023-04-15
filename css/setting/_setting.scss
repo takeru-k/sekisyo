@@ -1,0 +1,74 @@
+/*================================
+	ブレイクポイント
+=================================*/
+
+$breakpoints: (
+  'sm': (min-width: 640px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 1024px),
+  'xl': (min-width: 1280px)
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: xl) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*================================
+	色設定
+=================================*/
+$color-main: #230707;
+$color-sub: #82654B;
+$color-bg: #f7f7f7;
+$color-button: #F7B965;
+$color-link: #337ab7;
+
+/*================================
+	フォント
+=================================*/
+$font-en: Roboto,sans-serif;
+
+$font-mincho: "Noto Serif JP", 游明朝, "Yu Mincho", YuMincho, "Noto Serif Japanese", Georgia, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+
+/*================================
+	全体共通
+=================================*/
+body{
+  font-family:  "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK JP Subset", "Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+  font-weight: 500;
+  color: #333;
+  line-height: 1.75;
+}
+
+a{
+  color: inherit;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+table{
+  border-collapse: collapse;
+}

@@ -1,0 +1,92 @@
+@use "../setting/setting";
+
+.c-section{
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.c-section__heading{
+  text-align: center;
+  font-family: setting.$font-mincho;
+  padding-top: 40px;
+
+  span{
+    color: setting.$color-sub;
+    font-size: 28px;
+    text-transform: capitalize;
+    letter-spacing: .1em;;
+  }
+
+  h2{
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-section{
+    padding: 64px 0 80px;
+  }
+
+  .c-section__heading{
+  span{
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+}
+}
+
+.c-section__contents{
+  padding: 18px 0;
+
+  h2{
+    position: relative;
+    padding-bottom: 8px;
+
+        &:after{
+      content: '';
+      position: absolute;
+      background: #000;
+      height: 1px;
+      width: 20%;
+      left: 0;
+      bottom: 0px;
+    }
+  }
+}
+
+.-colored{
+  background: setting.$color-sub;
+  padding-bottom: 80px;
+
+  .c-section__heading{
+    span{
+      text-transform: uppercase;
+       color: #fff;
+    }
+
+    h2{
+       color: #fff;
+    }
+  }
+}
+
+.c-section__texts{
+  padding-top: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media (min-width: 1024px){
+    max-width: 680px;
+    padding-top: 28px;
+  }
+
+  p{
+    margin-bottom: 8px;
+  }
+}

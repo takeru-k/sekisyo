@@ -1,0 +1,81 @@
+@use "../setting/setting";
+
+.p-contact__wrapper{
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  p{
+    margin-bottom: 16px;
+  }
+
+}
+
+.p-contact__info{
+  text-align: center;
+  line-height: 1.4;
+  background: #f7f7f7;
+  padding: 24px 0;
+  margin-top: 32px;
+
+  a{
+    display: inline-block;
+    font-size: 32px;
+    color: setting.$color-main;
+    letter-spacing: 1px;
+    position: relative;
+
+    small{
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  span{
+    font-size: 14px;
+    display: block;
+    padding-top: 8px;
+  }
+}
+
+.-mail{
+  a{
+    font-size: 24px;
+
+
+    &:before{
+      
+      width: 24px;
+      height: 24px;
+      background: url(../images/common/icon-mail.svg) no-repeat center
+        center/cover;
+    }
+  }
+}
+.p-contact__mail{
+  
+  margin-top: 16px;
+
+  ul{
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 768px){
+  .p-contact__intro{
+
+      text-align: center;
+    
+  }
+
+  .-mail{
+    a{
+      font-size: 32px;
+    }
+  }
+
+  .p-contact__mail{
+    margin-top: 32px;
+  }
+
+}

@@ -1,0 +1,26 @@
+@use "../setting/setting";
+
+.p-topAbout{
+  padding: 64px 0 40px;
+  position: relative;
+}
+
+.p-topAbout__heading{
+  font-family: setting.$font-mincho;
+
+  h2{
+    font-weight: normal;
+    font-size: 24px;
+  }
+
+  span{
+    color: setting.$color-sub;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-topAbout{
+    padding: 120px 0;
+  }
+}

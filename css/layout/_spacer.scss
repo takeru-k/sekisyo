@@ -1,0 +1,15 @@
+.l-spacer{
+  padding: 16px 0 32px;
+}
+
+@media (min-width: 768px){
+  .l-spacer{
+    padding: 36px 0 16px;
+  }
+}
+
+@media (min-width: 1024px){
+  .l-spacer{
+    padding: 48px 0 16px;
+  }
+}

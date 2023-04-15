@@ -1,0 +1,55 @@
+@use "../setting/setting";
+
+.c-blog{
+  padding: 24px 0;
+
+}
+.c-blog__item{
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  &:first-child{
+    border-top: 1px solid #e5e5e5;
+  }
+}
+
+.c-blog__meta{
+  time{
+    font-size: 14px;
+  }
+
+  span{
+    text-decoration: none;
+    background: #004500;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+.c-blog__title{
+  display: block;
+  color: #337ab7;
+  padding-top: 12px;
+  text-decoration: underline;
+
+  &:hover{
+    opacity: .6;
+  }
+}
+
+@media (min-width: 1024px){
+  .c-blog{
+    padding: 32px 0 20px;
+  }
+
+  .c-blog__item{
+    display: flex;
+    padding: 40px 0;
+  }
+
+  .c-blog__title{
+    padding-top: 0;
+    padding-left: 24px;
+  }
+}

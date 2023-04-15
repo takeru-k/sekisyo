@@ -1,0 +1,76 @@
+@use "../setting/setting";
+
+.p-mainVisual{
+  position: relative;
+}
+
+
+.p-mainVisual__slider{
+  margin-left: auto;
+}
+
+.p-mainVisual__slider .slick-slide {
+  height: 400px;
+  overflow: hidden;
+}
+.p-mainVisual__slider .slick-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 1024px){
+  .p-mainVisual__slider .slick-slide{
+    height: 80vh;
+  }
+}
+
+
+.p-mainVisual__slider li{
+  position: relative;
+}
+
+.p-mainVisual__text{
+  padding: 0 20px;
+  font-family: setting.$font-mincho;
+
+  h1{
+    font-size: 24px;
+    font-weight: normal;
+
+    span{
+      color: setting.$color-sub;
+    }
+  }
+
+  p{
+    padding-top: 16px;
+    line-height: 1.75;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-mainVisual{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .p-mainVisual__slider{
+    width: 58%;
+  }
+
+  .p-mainVisual__text{
+    padding-left: 80px;
+    margin: 0 0 0 auto;
+
+    h1{
+      font-size: 48px;
+    }
+  }
+}
+
+
+

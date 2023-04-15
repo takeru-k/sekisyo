@@ -1,0 +1,81 @@
+@use "../setting/setting";
+
+.c-table{
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 800px;
+
+  tr{
+    border-bottom: 1px solid #eaeaea;
+
+    &:not(:first-child){
+      border-top: 1px solid #eaeaea;
+    }
+  }
+  
+  h3{
+    font-size: 18px;
+    padding-bottom: 12px;
+  }
+
+  table{
+    width: 100%;
+    
+  }
+
+
+  span{
+    font-size: 14px;
+    padding-left: 16px;
+  }
+
+  a{
+    text-decoration: underline;
+  }
+
+  li{
+    margin-bottom: 8px;
+  }
+}
+
+@media not all and (min-width: 768px){
+  .c-table{
+
+    th{
+      display: block;
+      padding: 16px 12px 0;
+      text-align: left;
+    }
+
+    td{
+      display: block;
+      padding: 8px 0 20px 12px;
+    }
+
+    
+  }
+}
+
+@media (min-width: 768px){
+  .c-table{
+   padding-top: 40px;
+
+    th{
+      padding: 24px;
+      width: 180px;
+    }
+
+    td{
+      padding: 24px;
+    }
+  }
+}
+
+.c-table__note{
+  padding-top: 16px;
+
+  a{
+    color: setting.$color-link;
+    font-weight: bold;
+  }
+}
