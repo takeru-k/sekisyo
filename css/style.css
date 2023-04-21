@@ -1538,6 +1538,11 @@ table {
   left: 0;
   background: #82654B;
 }
+@media (min-width: 1024px) {
+  .p-service__heading:after {
+    width: 10%;
+  }
+}
 
 @media (min-width: 768px) {
   .p-service__item {
@@ -1558,17 +1563,6 @@ table {
   .p-service__item li {
     font-size: 16px;
     position: relative;
-    padding-left: 20px;
-  }
-  .p-service__item li:before {
-    position: absolute;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background: url(../images/icon/icon-check.svg) no-repeat center center/cover;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 .p-contact__wrapper {
